@@ -8,7 +8,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation"
 
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { debounce } from "next/dist/server/utils"
+import { useDebouncedCallback } from "use-debounce"
 
 const FormSchema = z.object({
   searchPhrase: z.string().max(30, {
@@ -47,12 +47,7 @@ export function SearchForm() {
     [pathname, replace, searchParams],
   )
 
-  const debouncedSearch = useCallback(
-    debounce((phrase: string) => {
-      handleSearchParams(phrase)
-    }, 500),
-    [handleSearchParams],
-  )
+  const debouncedSearch = useDebouncedCallback((phrase: string) => handleSearchParams(phrase), 500)
 
   useEffect(() => {
     if (searchPhrase !== initialSearchPhrase) {
