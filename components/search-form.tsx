@@ -9,6 +9,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { useDebouncedCallback } from "use-debounce"
+import { Label } from "@/components/ui/label"
 
 const FormSchema = z.object({
   searchPhrase: z.string().max(30, {
@@ -72,14 +73,21 @@ export function SearchForm() {
           name="searchPhrase"
           render={({ field }) => (
             <FormItem>
+              <Label
+                htmlFor="searchInput"
+                className="sr-only"
+              >
+                Search Phrase:
+              </Label>
               <FormControl>
                 <Input
                   placeholder="Search phrase"
                   aria-label="Search for repositories"
+                  aria-describedby="searchError"
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage id="searchError" />
             </FormItem>
           )}
         />

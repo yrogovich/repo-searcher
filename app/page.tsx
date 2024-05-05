@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <main className="relative min-h-screen py-16">
       <Container className="space-y-6">
-        <h1 className="text-2xl">Github Repos</h1>
-        <Suspense>
+        <h1 className="text-center text-2xl">Github repository search</h1>
+        <Suspense fallback={<div>Loading...</div>}>
           <SearchForm />
           <SearchTable />
         </Suspense>

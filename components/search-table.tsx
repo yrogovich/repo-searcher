@@ -30,6 +30,7 @@ const SearchTable = () => {
     <DataTable
       data={items}
       columns={columns}
+      caption={`Search results for: ${searchPhrase}`}
     />
   )
 }
