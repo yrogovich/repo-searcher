@@ -34,7 +34,7 @@ And adding anything else that will be useful for the user...
 
 ## What to improve
 
-- [ ] WCAG: Add proper ARIA attributes to form elements for screen reader compatibility.
+- [X] WCAG: Add proper ARIA attributes to form elements for screen reader compatibility.
 - [ ] Error Handling: Adding a user-friendly error display mechanism in the UI for a better experience.
 - [ ] UI: Incorporate visual loading indicators while the form submits and searches.
 - [ ] Caching: Introduce a more robust caching system (e.g., Redis or an in-memory cache) to complement React Query's
