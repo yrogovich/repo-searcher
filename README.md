@@ -14,10 +14,11 @@ Search for repositories on GitHub
 
 ## 🌟 Challenge
 
-Develop an application that is a GitHub repository search 🔍. On the main page, the application should render an input and a table with the search results. Its structure should look like this:
+Develop an application that is a GitHub repository search 🔍. On the main page, the application should render an input
+and a table with the search results. Its structure should look like this:
 
 | Name                    | Owner     | Stars | Created at |
-| ----------------------- | --------- | ----- | ---------- |
+|-------------------------|-----------|-------|------------|
 | yrogovich/repo-searcher | yrogovich | 1     | 2016-10-29 |
 
 Please add the following features (as many as you can) in the following order:
@@ -26,7 +27,8 @@ Please add the following features (as many as you can) in the following order:
 - [x] Presenting a simple loading/error state
 - [x] Sorting the table by columns, pagination, and changing the number of rows displayed (locally).
 - [x] Updating the current URL on query change or table sort, so we get the same results when the page gets refreshed.
-- [ ] Removing a "search" button and firing API requests only when the user stopped typing (please be aware of GitHub rate limits).
+- [x] Removing a "search" button and firing API requests only when the user stopped typing (please be aware of GitHub
+  rate limits).
 
 And adding anything else that will be useful for the user...
 
@@ -63,7 +65,8 @@ And adding anything else that will be useful for the user...
 
 ## 💬 Commit Messages
 
-This project uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit messages. This convention makes it easier to understand the changes in a project and to automate the versioning process.
+This project uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit
+messages. This convention makes it easier to understand the changes in a project and to automate the versioning process.
 
 ## 🐙 GitHub APIs
 
@@ -81,7 +84,10 @@ You should be able to modify this to suit your needs.
 
 Please note that GitHub requests are rate limited as follows:
 
-> The Search API has a custom rate limit. For requests using Basic Authentication, OAuth, or client ID and secret, you can make up to 30 requests per minute. For unauthenticated requests, the rate limit allows you to make up to 10 requests per minute.
+> The Search API has a custom rate limit. For requests using Basic Authentication, OAuth, or client ID and secret, you
+> can make up to 30 requests per minute. For unauthenticated requests, the rate limit allows you to make up to 10
+> requests
+> per minute.
 
 ## 🔗 Relevant Links
 
@@ -94,6 +100,8 @@ Please note that GitHub requests are rate limited as follows:
 - [Octokit.js](https://octokit.github.io/rest.js/v20#usage)
 - [TanStack Table](https://tanstack.com/table/latest)
 - [TansStack Query](https://tanstack.com/query/latest)
+- [React Form](https://react-hook-form.com/get-started)
+- [Zod](https://zod.dev/?id=introduction)
 
 ## 📜 License
 
