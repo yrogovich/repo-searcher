@@ -50,7 +50,8 @@ And adding anything else that will be useful for the user...
      ```bash
    npm install
    ```
-4. Start the development server
+4. Add .env.local file to the root of the project from the .env.example file and add your GitHub token to the file.
+5. Start the development server
 
    ```bash
     pnpm run dev
