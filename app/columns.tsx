@@ -2,6 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 import { format } from "date-fns"
+import { DataTableColumnHeader } from "@/components/data-table-column-header"
 
 export type Repo = {
   id: number
@@ -14,7 +15,12 @@ export type Repo = {
 export const columns: ColumnDef<Repo>[] = [
   {
     accessorKey: "name",
-    header: "Name",
+    header: ({ column }) => (
+      <DataTableColumnHeader
+        column={column}
+        title="Name"
+      />
+    ),
     cell: ({ row }) => {
       // TODO: Long names should be truncated
       // TODO: Add a link to the repository
@@ -27,18 +33,33 @@ export const columns: ColumnDef<Repo>[] = [
   },
   {
     accessorKey: "owner",
-    header: "Owner",
+    header: ({ column }) => (
+      <DataTableColumnHeader
+        column={column}
+        title="Owner"
+      />
+    ),
   },
   {
     accessorKey: "stars",
-    header: "Stars",
+    header: ({ column }) => (
+      <DataTableColumnHeader
+        column={column}
+        title="Stars"
+      />
+    ),
     cell: ({ row }) => {
       return <div className="text-right">{row.original.stars}</div>
     },
   },
   {
     accessorKey: "created_at",
-    header: "Created at",
+    header: ({ column }) => (
+      <DataTableColumnHeader
+        column={column}
+        title="Created at"
+      />
+    ),
     cell: ({ row }) => {
       return format(new Date(row.original.created_at), "yyyy-MM-dd")
     },
