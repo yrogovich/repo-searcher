@@ -92,6 +92,8 @@ Please note that GitHub requests are rate limited as follows:
 - [Shadcn](https://ui.shadcn.com/docs)
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)
 - [Octokit.js](https://octokit.github.io/rest.js/v20#usage)
+- [TanStack Table](https://tanstack.com/table/latest)
+- [TansStack Query](https://tanstack.com/query/latest)
 
 ## 📜 License
 
