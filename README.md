@@ -32,7 +32,7 @@ Please add the following features (as many as you can) in the following order:
 
 And adding anything else that will be useful for the user...
 
-## What to improve
+## 🚀 Planned enhancements
 
 - [X] WCAG: Add proper ARIA attributes to form elements for screen reader compatibility.
 - [ ] Error Handling: Adding a user-friendly error display mechanism in the UI for a better experience.
