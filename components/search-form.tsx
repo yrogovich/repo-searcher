@@ -31,8 +31,9 @@ export function SearchForm() {
       searchPhrase: initialSearchPhrase,
     },
   })
+  const { watch, setValue } = form
 
-  const searchPhrase = form.watch("searchPhrase")
+  const searchPhrase = watch("searchPhrase")
 
   const handleSearchParams = useCallback(
     (term: string) => {
@@ -50,11 +51,11 @@ export function SearchForm() {
   const debouncedSearch = useDebouncedCallback((phrase: string) => handleSearchParams(phrase), 500)
 
   useEffect(() => {
-    if (searchPhrase !== initialSearchPhrase) {
-      form.setValue("searchPhrase", searchPhrase)
-      debouncedSearch(searchPhrase)
-    }
-  }, [searchPhrase, initialSearchPhrase, form, debouncedSearch])
+    if (searchPhrase === initialSearchPhrase) return
+
+    setValue("searchPhrase", searchPhrase)
+    debouncedSearch(searchPhrase)
+  }, [setValue, searchPhrase, initialSearchPhrase, form, debouncedSearch])
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     handleSearchParams(data.searchPhrase)
@@ -74,6 +75,7 @@ export function SearchForm() {
               <FormControl>
                 <Input
                   placeholder="Search phrase"
+                  aria-label="Search for repositories"
                   {...field}
                 />
               </FormControl>
