@@ -38,7 +38,7 @@ export function DataTable<TData, TValue>({ columns, data, caption }: DataTablePr
     <>
       <div className="w-full rounded-md border">
         <Table>
-          {caption && <caption>{caption}</caption>}
+          {caption && <caption className={"sr-only"}>{caption}</caption>}
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
