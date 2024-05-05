@@ -31,6 +31,6 @@ export const fetchRepos = async (searchPhrase = ""): Promise<FetchReposResponse>
     return { data: items }
   } catch (error) {
     console.error("Error fetching repositories:", error)
-    return { error: "Failed to fetch data", data: [] }
+    throw new Error("Failed to fetch data")
   }
 }
