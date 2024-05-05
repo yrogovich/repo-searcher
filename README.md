@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+<h3 align="center">Repos searcher </h3>
+<p align="center">
+Search for repositories on GitHub
 
-First, run the development server:
+<br/>
+<br/>
+<a href="https://repo-searcher-five.vercel.app/">Vercel Demo</a> —
+<a href="https://github.com/yrogovich/repo-searcher/issues/new?labels=bug&template=bug-report---.md">Report Bug</a> —
+<a href="https://github.com/yrogovich/repo-searcher/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+</p>
+</div>
+
+## 🌟 Challenge
+Develop an application that is a GitHub repository search 🔍. On the main page, the application should render an input and a table with the search results. Its structure should look like this:
+
+
+| Name | Owner | Stars | Created at |
+|--|--|--|--|
+| yrogovich/repo-searcher | yrogovich | 1 | 2016-10-29 |
+
+Please add the following features (as many as you can) in the following order:
+
+- [ ] Caching the search results, so we don't have to make an API call if the results were fetched before.
+- [ ] Presenting a simple loading/error state
+- [ ] Sorting the table by columns, pagination, and changing the number of rows displayed (locally).
+- [ ] Updating the current URL on query change or table sort, so we get the same results when the page gets refreshed.
+- [ ] Removing a "search" button and firing API requests only when the user stopped typing (please be aware of GitHub rate limits).
+
+And adding anything else that will be useful for the user...  
+
+## 🔧 Installation and Setup
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yrogovich/repo-searcher.git
+   ```
+2. Navigate to the project directory
+   ```bash
+   cd repo-searcher
+   ```
+3. Install dependencies
+
+   recommended method👇🏾
+   ```bash
+   pmpm install
+   ```
+   or old school method 👴🏾
+     ```bash
+   npm install
+   ```
+4. Start the development server
+
+   ```bash
+    pnpm run dev
+    ```
+   
+## 💬 Commit Messages
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit messages. This convention makes it easier to understand the changes in a project and to automate the versioning process.
+
+## 🐙 GitHub APIs
+
+Full documentation for GitHub's Search APIs can be found here:
+
+* [https://developer.github.com/v3/search/](https://developer.github.com/v3/search/)
+
+A sample query to find repos with "tetris" can be found below:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+curl https://api.github.com/search/repositories?q=tetris&sort=stars&order=desc
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You should be able to modify this to suit your needs.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Please note that GitHub requests are rate limited as follows:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+> The Search API has a custom rate limit. For requests using Basic Authentication, OAuth, or client ID and secret, you can make up to 30 requests per minute. For unauthenticated requests, the rate limit allows you to make up to 10 requests per minute.
 
-## Learn More
+## 🔗 Relevant Links
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/learn)
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [Tailwind CSS](https://v2.tailwindcss.com/docs)
+- [Shadcn](https://ui.shadcn.com/docs)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)
+- [Octokit.js](https://octokit.github.io/rest.js/v20#usage)
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](https://opensource.org/license/mit/).
