@@ -14,8 +14,10 @@ export const fetchRepos = async (searchPhrase = ""): Promise<FetchReposResponse>
   if (!searchPhrase.trim()) return { data: [] }
 
   try {
+    // TODO: Add pagination support from backend to fetch more than 1000 repositories & synchronize with frontend pagination
     const response = await octokit.request("GET /search/repositories", {
       q: searchPhrase,
+      per_page: 1000, // Maximum allowed value
     })
 
     const items = response.data.items.map(
