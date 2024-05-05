@@ -22,10 +22,10 @@ Develop an application that is a GitHub repository search 🔍. On the main page
 
 Please add the following features (as many as you can) in the following order:
 
-- [X] Caching the search results, so we don't have to make an API call if the results were fetched before.
-- [X] Presenting a simple loading/error state
-- [X] Sorting the table by columns, pagination, and changing the number of rows displayed (locally).
-- [X] Updating the current URL on query change or table sort, so we get the same results when the page gets refreshed.
+- [x] Caching the search results, so we don't have to make an API call if the results were fetched before.
+- [x] Presenting a simple loading/error state
+- [x] Sorting the table by columns, pagination, and changing the number of rows displayed (locally).
+- [x] Updating the current URL on query change or table sort, so we get the same results when the page gets refreshed.
 - [ ] Removing a "search" button and firing API requests only when the user stopped typing (please be aware of GitHub rate limits).
 
 And adding anything else that will be useful for the user...

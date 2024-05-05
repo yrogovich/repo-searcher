@@ -1,6 +1,6 @@
 "use client"
 
-import { ColumnDef } from '@tanstack/react-table'
+import { ColumnDef } from "@tanstack/react-table"
 import { format } from "date-fns"
 
 export type Repo = {
@@ -18,8 +18,12 @@ export const columns: ColumnDef<Repo>[] = [
     cell: ({ row }) => {
       // TODO: Long names should be truncated
       // TODO: Add a link to the repository
-      return <div className='text-left'>{row.original.owner}/{row.original.name}</div>
-    }
+      return (
+        <div className="text-left">
+          {row.original.owner}/{row.original.name}
+        </div>
+      )
+    },
   },
   {
     accessorKey: "owner",
@@ -29,8 +33,8 @@ export const columns: ColumnDef<Repo>[] = [
     accessorKey: "stars",
     header: "Stars",
     cell: ({ row }) => {
-      return <div className='text-right'>{row.original.stars}</div>
-    }
+      return <div className="text-right">{row.original.stars}</div>
+    },
   },
   {
     accessorKey: "created_at",
