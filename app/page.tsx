@@ -1,4 +1,4 @@
-import Container from "@/components/container";
+import Container from "@/components/container"
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
         <h1 className="text-2xl">Github Repos</h1>
       </Container>
     </main>
-  );
+  )
 }
