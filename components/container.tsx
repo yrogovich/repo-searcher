@@ -1,11 +1,13 @@
+import { cn } from "@/lib/utils"
 import React, { ReactNode } from "react"
 
 interface ContainerProps {
   children: ReactNode
+  className?: string
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
-  return <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
+const Container: React.FC<ContainerProps> = ({ children, className }) => {
+  return <div className={cn("container mx-auto px-4 sm:px-6 lg:px-8", className)}>{children}</div>
 }
 
 export default Container
